@@ -13,18 +13,10 @@ public class Board {
         this.initialRow = initialRow;
         this.initialCol = initialCol;
         this.rows = rows;
-        this.cols = cols; 
+        this.cols = cols;
         board = new int[rows][cols];
 
         clearBoard();
-//        for (int r = 0; r < board.length; r++) {
-//            for (int c = 0; c < board[r].length; c++) {
-//                board[r][c] = 0;
-//            }
-//        }
-//        targetR = rows - 1;
-//        targetC = cols - 1;
-//        board[targetR][targetC] = 100;
     }
 
 
@@ -47,7 +39,7 @@ public class Board {
         for (int r = 0; r < board.length;    r++) {
             for (int c = 0; c < board[r].length; c++) {
                 if ( r == targetR &&  c == targetC ) {
-                    ascii.append(space).append("!");
+                    ascii.append(space).append("*");
                 } else if ( r == initialRow && c == initialCol ) {
                     ascii.append(space).append("X");
                 } else {
@@ -55,7 +47,7 @@ public class Board {
                     if (v > 0) {
                         ascii.append(space).append(v);
                     } else {
-                        ascii.append(space).append(".");
+                        ascii.append(space).append("o");
                     }
                 }
             }
@@ -63,8 +55,5 @@ public class Board {
         }
         System.out.println(ascii);
     }
-
-
-
 }
 
