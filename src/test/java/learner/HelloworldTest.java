@@ -1,14 +1,14 @@
-package learner;
+    package learner;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+//    import org.junit.jupiter.api.Test;
+//    import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class HelloworldTest {
+    public class HelloworldTest {
 
-    @Test
-    public void testGetMsg() {
-        Helloworld hw = new Helloworld();
-        String expectedMessage = "Hello world! How does IDEA and github work?";
-        assertEquals(expectedMessage, hw.getMsg());
+        @Test
+        public void testGetMsg() {
+            Helloworld hw = new Helloworld();
+            String expectedMessage = "Hello world! How does IDEA and github work?";
+            assertEquals(expectedMessage, hw.getMsg());
+        }
     }
-}
