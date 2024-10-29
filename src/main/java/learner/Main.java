@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
-        // Birth  location of the Agent
+        // Birth location of the Agent
         int initialRow = 3;
         int initialCol = 3;
         // Grid bounds
@@ -18,6 +18,7 @@ public class Main {
         // No training! Brownian motion and count!
         int stepsWithoutTraining = runAgentAndCountSteps(agent, board);
         System.out.printf("PRE TRAINING STEPS: %d%n", stepsWithoutTraining);
+        board.showBoard();
 
         // Early stopping parameters
         int patience = 50;  // Number of episodes to wait for improvement
@@ -55,9 +56,11 @@ public class Main {
             }
         }
 
-        // Now it has been trained! Check the steps tally!
+        // Now it has been trained! Reset the board and check the steps tally!
+        board.clearBoard();  // Clear board for a clean display
         int stepsWithTraining = runAgentAndCountSteps(agent, board);
         System.out.printf("POST TRAINING STEPS: %d%n", stepsWithTraining);
+        board.showBoard();  // Show the board after the clean run
     }
 
     // Helper function to check if steps have plateaued
