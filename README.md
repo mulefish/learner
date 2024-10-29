@@ -7,7 +7,7 @@ B: 10 by 30 grid
 C: Agent to find the Goal - random ->  training ( build 'q table' ) -> trained   
 
 # Plateaued
-Early stopping at episode 397 of 34 potential episode: steps plateaued at around 1000 steps
+Early stopping at episode 397 of 1000 potential episode: steps plateaued at around 34 steps
 
 
 # PRE TRAINING STEPS: 9771

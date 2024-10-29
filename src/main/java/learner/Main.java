@@ -50,7 +50,7 @@ public class Main {
 
             // Check for plateau: exit if the steps have plateaued
             if (recentSteps.size() == patience && hasPlateaued(recentSteps, minImprovement)) {
-                System.out.printf("Early stopping at episode %d of %d potential episode: steps plateaued at around %d steps%n", episode, bestSteps, episodeLimit);
+                System.out.printf("Early stopping at episode %d of %d potential episode: steps plateaued at around %d steps%n", episode, episodeLimit, bestSteps);
                 break;
             }
         }
